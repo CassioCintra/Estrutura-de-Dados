@@ -44,6 +44,29 @@ function insertionSort(vetor){
     }
     console.log(vetor)
 }
+function quickSort(vetor, left, right){
+    var i = left
+    var j = right
+    var aux
+    var pivotidx = Math.floor((left + right) / 2)
+    var pivot = vetor[pivotidx]
+
+    //Partição
+    while(i <= j){
+        while(parseInt(vetor[i]) < pivot)
+            i++
+        while(parseInt(vetor[j]) > pivot)
+            j++
+        if(i <= j){
+            aux = vetor[i]
+            vetor[i] = vetor [j]
+            vetor[j] = aux
+            i++
+            j--
+        }
+        
+    }
+}
 
 const vet = [10, 20, 12, 5, 8, 15]
 const vet1 = [10, 20, 12, 5, 8, 15]
