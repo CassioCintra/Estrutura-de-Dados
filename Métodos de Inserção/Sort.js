@@ -77,6 +77,8 @@ const vet = [10, 20, 12, 5, 8, 15]
 const vet1 = [10, 20, 12, 5, 8, 15]
 const vet2 = [10, 20, 12, 5, 8, 15]
 const vet3 = [10, 20, 12, 5, 8, 15]
+const vet4 = [10, 20, 12, 5, 8, 15]
 bubbleSort(vet1)
 selectionSort(vet2)
 insertionSort(vet3)
+quickSort(vet4)
