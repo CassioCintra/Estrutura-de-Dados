@@ -1,14 +1,11 @@
-function torreDeHanoi(disco, origem, auxiliar, destino){
-    // Primeiro disco direto para torre C
-    for(i = 0; i < 3; i++){
-        if(disco == 1){
-            return (console.log(`Disco 1 da ${origem} para a ${destino}`));
-        }
-        else{
-            return (console.log(`Disco ${disco} da ${origem} para a ${destino}`));
-        }
+function torreDeHanoi(n, origem, destino, auxiliar){
+    if(n == 1)
+        console.log(`Mova o Disco ${n} da ` + origem + " para a " + destino)
+    else{
+        torreDeHanoi(n - 1, origem, auxiliar, destino)
+        console.log(`Mova o Disco ${n} da ` + origem + " para a " + destino)
+        torreDeHanoi(n - 1, auxiliar, destino, origem)
+
     }
 }
-//Programa para testar a função
-const numeroDiscos = [1, 2, 3]
-torreDeHanoi(numeroDiscos, `Torre A`, `Torre B`, `Torre C`);
+torreDeHanoi(3,'Torre A', 'Torre C', 'Torre B')
