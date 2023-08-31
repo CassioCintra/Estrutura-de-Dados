@@ -64,8 +64,13 @@ function quickSort(vetor, left, right){
             i++
             j--
         }
-        
     }
+    //Recursão
+    if(left < j)
+        quickSort(vetor, left, j)
+    if(i < right)
+        quickSort(vetor, i, right)
+    return vetor
 }
 
 const vet = [10, 20, 12, 5, 8, 15]
