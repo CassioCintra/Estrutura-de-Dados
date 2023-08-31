@@ -1,5 +1,20 @@
+function bubbleSort(){
+    const vetor = [10, 20, 12, 5, 8, 15]
+    
+    for (let i = 0; i < vetor.length; i++) {
+        for (let j = 0; j < vetor.length - 1 - i; j++) {
+            if (vetor[j] > vetor[j + 1]) {
+                // Trocar os elementos de posição
+                let auxiliar = vetor[j];
+                vetor[j] = vetor[j + 1];
+                vetor[j + 1] = auxiliar;
+            }
+        }
+    }
+    console.log(vetor);
+}
 function selectionSort(){
-    var vetor = [10, 20, 12, 5, 8, 15]
+    const vetor = [10, 20, 12, 5, 8, 15]
 
     for (i = 0; i < vetor.length; i++){
         var small = vetor[i]
