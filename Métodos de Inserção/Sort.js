@@ -1,6 +1,5 @@
-function bubbleSort(){
-    const vetor = [10, 20, 12, 5, 8, 15]
-    
+function bubbleSort(vetor){
+
     for (let i = 0; i < vetor.length; i++) {
         for (let j = 0; j < vetor.length - 1 - i; j++) {
             if (vetor[j] > vetor[j + 1]) {
@@ -13,8 +12,7 @@ function bubbleSort(){
     }
     console.log(vetor);
 }
-function selectionSort(){
-    const vetor = [10, 20, 12, 5, 8, 15]
+function selectionSort(vetor){
 
     for (i = 0; i < vetor.length; i++){
         var small = vetor[i]
@@ -32,10 +30,7 @@ function selectionSort(){
     }
     console.log(vetor)
 }
-function insertionSort(){
-// Guarda o numero a ser alterado numa variavel
-// comparando e trocando posições
-    var vetor = [10, 20, 12, 5, 8, 15]
+function insertionSort(vetor){
 
     for (i = 1; i < vetor.length; i++){
         var variable = vetor[i]
@@ -49,3 +44,11 @@ function insertionSort(){
     }
     console.log(vetor)
 }
+
+const vet = [10, 20, 12, 5, 8, 15]
+const vet1 = [10, 20, 12, 5, 8, 15]
+const vet2 = [10, 20, 12, 5, 8, 15]
+const vet3 = [10, 20, 12, 5, 8, 15]
+bubbleSort(vet1)
+selectionSort(vet2)
+insertionSort(vet3)
