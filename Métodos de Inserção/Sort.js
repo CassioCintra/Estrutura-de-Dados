@@ -44,33 +44,32 @@ function insertionSort(vetor){
     }
     console.log(vetor)
 }
-function quickSort(vetor, left, right){
+function  quicksort(array, left, right){
     var i = left
     var j = right
     var aux
-    var pivotidx = Math.floor((left + right) / 2)
-    var pivot = vetor[pivotidx]
-
-    //Partição
+    var pivotidx = Math.floor((left + right)/2)
+    var pivot = array[pivotidx]
+    // Partição
     while(i <= j){
-        while(parseInt(vetor[i]) < pivot)
+        while(array[i] < pivot)
             i++
-        while(parseInt(vetor[j]) > pivot)
-            j++
+        while(array[j] > pivot)
+            j--
         if(i <= j){
-            aux = vetor[i]
-            vetor[i] = vetor [j]
-            vetor[j] = aux
+            aux = array[i]
+            array[i] = array[j]
+            array[j] = aux
             i++
             j--
         }
     }
-    //Recursão
+    // Recursão
     if(left < j)
-        quickSort(vetor, left, j)
+        quicksort(array, left, j)
     if(i < right)
-        quickSort(vetor, i, right)
-    return vetor
+        quicksort(array, i, right)
+    return array
 }
 
 const vet = [10, 20, 12, 5, 8, 15]
@@ -81,4 +80,4 @@ const vet4 = [10, 20, 12, 5, 8, 15]
 bubbleSort(vet1)
 selectionSort(vet2)
 insertionSort(vet3)
-quickSort(vet4)
+quickSort(vet4, 0, vet.length - 1)
