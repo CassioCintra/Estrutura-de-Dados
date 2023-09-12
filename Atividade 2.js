@@ -81,7 +81,7 @@ const vetorRandom = []
 const vetorOrganizado = []
 const vetorInvertido = []
 
-console.log("Tempo de Execução BubbleSort")
+    console.log("Tempo de Execução BubbleSort")
     criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
     console.time('VetorRandom')
     bubbleSort(vetorRandom)
