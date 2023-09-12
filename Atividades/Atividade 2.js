@@ -65,6 +65,7 @@ function quickSort(vetor, left, right){
         quickSort(vetor, i, right)
     return vetor
 }
+
 function criaVetor(vetorRandom, vetorOrganizado, vetorInvertido){
     for(let i = 0; i < tamanho; i++){
         vetorRandom[i] = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo
