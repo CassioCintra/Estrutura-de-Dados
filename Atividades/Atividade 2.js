@@ -71,10 +71,9 @@ function criaVetor(vetorRandom, vetorOrganizado, vetorInvertido){
         vetorOrganizado[i] = i + 1
         vetorInvertido[i] = tamanho - i
     }
-    return vetorRandom, vetorOrganizado, vetorOrganizado
 }
 
-let tamanho = 100
+let tamanho = 1000
 let minimo = 1
 let maximo = 1000
 const vetorRandom = []
