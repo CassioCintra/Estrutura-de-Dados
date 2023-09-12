@@ -65,24 +65,24 @@ function quickSort(vetor, left, right){
         quickSort(vetor, i, right)
     return vetor
 }
-
-    let tamanho = 1000
-    let minimo = 1
-    let maximo = 1000
-    const vetorRandom = []
-    const vetorOrganizado = []
-    const vetorInvertido = []
-
+function criaVetor(vetorRandom, vetorOrganizado, vetorInvertido){
     for(let i = 0; i < tamanho; i++){
         vetorRandom[i] = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo
         vetorOrganizado[i] = i + 1
         vetorInvertido[i] = tamanho - i
-
     }
-    console.log(vetorRandom)
-    console.log(vetorOrganizado)
-    console.log(vetorInvertido)
-    console.log("Tempo de Execução BubbleSort")
+    return vetorRandom, vetorOrganizado, vetorOrganizado
+}
+
+let tamanho = 100
+let minimo = 1
+let maximo = 1000
+const vetorRandom = []
+const vetorOrganizado = []
+const vetorInvertido = []
+
+console.log("Tempo de Execução BubbleSort")
+    criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
     console.time('VetorRandom')
     bubbleSort(vetorRandom)
     console.timeEnd('VetorRandom')
@@ -93,6 +93,7 @@ function quickSort(vetor, left, right){
     bubbleSort(vetorInvertido)
     console.timeEnd('VetorInvertido')
     console.log('Tempo de Execução SelectionSort')
+    criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
     console.time('VetorRandom')
     selectionSort(vetorRandom)
     console.timeEnd('VetorRandom')
@@ -103,6 +104,7 @@ function quickSort(vetor, left, right){
     selectionSort(vetorInvertido)
     console.timeEnd('VetorInvertido')
     console.log("Tempo de Execução InsertionSort")
+    criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
     console.time('VetorRandom')
     insertionSort(vetorRandom)
     console.timeEnd('VetorRandom')
@@ -113,6 +115,7 @@ function quickSort(vetor, left, right){
     insertionSort(vetorInvertido)
     console.timeEnd('VetorInvertido')
     console.log("Tempo de Execução QuickSort")
+    criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
     console.time('VetorRandom')
     insertionSort(vetorRandom)
     console.timeEnd('VetorRandom')
