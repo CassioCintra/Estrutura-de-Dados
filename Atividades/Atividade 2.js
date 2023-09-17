@@ -66,62 +66,62 @@ function quickSort(vetor, left, right){
     return vetor
 }
 
-function criaVetor(vetorRandom, vetorOrganizado, vetorInvertido){
+function criaVetor(vetorRandom, vetorCrescente, vetorDecrescente){
+    let tamanho = 1000
+    let maximo = 1000
+    let minimo = 1
     for(let i = 0; i < tamanho; i++){
         vetorRandom[i] = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo
-        vetorOrganizado[i] = i + 1
-        vetorInvertido[i] = tamanho - i
+        vetorCrescente[i] = i + 1
+        vetorDecrescente[i] = tamanho - i
     }
 }
 
-let tamanho = 1000
-let minimo = 1
-let maximo = 1000
 const vetorRandom = []
-const vetorOrganizado = []
-const vetorInvertido = []
+const vetorCrescente = []
+const vetorDecrescente = []
 
 console.log("Tempo de Execução BubbleSort")
-criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
+criaVetor(vetorRandom, vetorCrescente, vetorDecrescente)
 console.time('VetorRandom')
 bubbleSort(vetorRandom)
 console.timeEnd('VetorRandom')
-console.time('VetorOrganizado')
-bubbleSort(vetorOrganizado)
-console.timeEnd('VetorOrganizado')
+console.time('Vetor Crescente')
+bubbleSort(vetorCrescente)
+console.timeEnd('Vetor Crescente')
 console.time('VetorInvertido')
-bubbleSort(vetorInvertido)
+bubbleSort(vetorDecrescente)
 console.timeEnd('VetorInvertido')
 console.log('Tempo de Execução SelectionSort')
-criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
+criaVetor(vetorRandom, vetorCrescente, vetorDecrescente)
 console.time('VetorRandom')
 selectionSort(vetorRandom)
 console.timeEnd('VetorRandom')
-console.time('VetorOrganizado')
-selectionSort(vetorOrganizado)
-console.timeEnd('VetorOrganizado')
+console.time('Vetor Crescente')
+selectionSort(vetorCrescente)
+console.timeEnd('Vetor Crescente')
 console.time('VetorInvertido')
-selectionSort(vetorInvertido)
+selectionSort(vetorDecrescente)
 console.timeEnd('VetorInvertido')
 console.log("Tempo de Execução InsertionSort")
-criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
+criaVetor(vetorRandom, vetorCrescente, vetorDecrescente)
 console.time('VetorRandom')
 insertionSort(vetorRandom)
 console.timeEnd('VetorRandom')
-console.time('VetorOrganizado')
-insertionSort(vetorOrganizado)
-console.timeEnd('VetorOrganizado')
+console.time('Vetor Crescente')
+insertionSort(vetorCrescente)
+console.timeEnd('Vetor Crescente')
 console.time('VetorInvertido')
-insertionSort(vetorInvertido)
+insertionSort(vetorDecrescente)
 console.timeEnd('VetorInvertido')
 console.log("Tempo de Execução QuickSort")
-criaVetor(vetorRandom, vetorOrganizado, vetorInvertido)
+criaVetor(vetorRandom, vetorCrescente, vetorDecrescente)
 console.time('VetorRandom')
 insertionSort(vetorRandom)
 console.timeEnd('VetorRandom')
-console.time('VetorOrganizado')
-insertionSort(vetorOrganizado)
-console.timeEnd('VetorOrganizado')
+console.time('Vetor Crescente')
+insertionSort(vetorCrescente)
+console.timeEnd('Vetor Crescente')
 console.time('VetorInvertido')
-insertionSort(vetorInvertido)
+insertionSort(vetorDecrescente)
 console.timeEnd('VetorInvertido')
