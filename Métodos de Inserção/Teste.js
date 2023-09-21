@@ -1,4 +1,4 @@
-function  quicksort(array, left, right){
+function  quickSort(array, left, right){
     var i = left
     var j = right
     var aux
@@ -18,15 +18,19 @@ function  quicksort(array, left, right){
             j--
         }
     }
+    let count = 0
     // Recursão
-    if(left < j)
-        quicksort(array, left, j)
-    if(i < right)
-        quicksort(array, i, right)
+    if(left < j){
+        quickSort(array, left, j)
+        count ++
+    }
+    if(i < right){
+        quickSort(array, i, right)
+        count ++
+    }
+    console.log(count)
     return array
 }
 
-var vet = [10, 20, 12, 5, 8, 15]
-
-quicksort(vet, 0, vet.length - 1)
-console.log(vet)
+vetor = [22, 74, 55, 31, 10, 63, 87]
+quickSort(vetor, 0, vetor.length)

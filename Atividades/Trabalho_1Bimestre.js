@@ -67,7 +67,7 @@ function quickSort(vetor, left, right){
 }
 
 function criaVetor(vetorRandom, vetorCrescente, vetorDecrescente){
-    let tamanho = 100000
+    let tamanho = 6
     let maximo = 1000
     let minimo = 1
     for(let i = 0; i < tamanho; i++){
