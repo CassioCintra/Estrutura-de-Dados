@@ -10,11 +10,8 @@ try:
     # Obtenha a resolução mais alta disponível
     stream = videoInstance.streams.get_highest_resolution()
     
-    # Defina um diretório de destino para o download
+    # Defina um destino para o download
     stream.download(output_path='C:\Vídeos Python')
-    
-    # # Realize o download
-    # stream.download()
     
     print("Download concluído com sucesso!")
 
