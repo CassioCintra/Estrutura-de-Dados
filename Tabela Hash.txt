@@ -1,0 +1,27 @@
+N I V O Z U A E F R B L
+
+A) tamanho 7, usando listas encadeadas
+	
+	0 - N - U - Nulo 
+	1 - V - O - A - Nulo
+	2 - I - B - Nulo
+	3 - Nulo
+	4 - F - Nulo
+	5 - Z - E - L - Nulo
+	6 - F - Nulo
+	
+B)Tamanho 13, usando Hashing Linear
+
+	0- Z
+	1- N
+	2- O
+	3- A
+	4- B
+	5- E
+	6- F
+	7- R
+	8- U
+	9- I
+	10- V
+	11- 
+	12- L
