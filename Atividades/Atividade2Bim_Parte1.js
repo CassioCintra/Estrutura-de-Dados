@@ -27,7 +27,7 @@ function verificarExpressao(expressao) {
     if (fila.length === 0) {
         return console.log("A expressão foi aberta e fechada corretamente.")
     }
-    //Sobra um caracter ) ou ] ou }
+    //Sobra um caracter: ) ou ] ou }
     else {
         return console.log("A expressão não foi fechada corretamente.")
     }
