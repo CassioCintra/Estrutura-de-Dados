@@ -14,7 +14,7 @@ function verificarExpressao(expressao) {
                 return console.log("A expressão não foi aberta corretamente.")
             }
 
-            const abre = fila.shift();
+            const abre = fila.pop();
             // Verificar o caracter de abertura é o correto
             if ((caractere === ')' && abre !== '(') || (caractere === ']' && abre !== '[') ||
                 (caractere === '}' && abre !== '{')) {
@@ -33,5 +33,5 @@ function verificarExpressao(expressao) {
     }
 }
 
-var expressao = '({({[])}))'
+var expressao = '}({({[]})})'
 verificarExpressao(expressao)
