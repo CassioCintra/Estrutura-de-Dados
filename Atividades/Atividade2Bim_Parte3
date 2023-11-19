@@ -16,19 +16,16 @@ class ListaEncadeada {
             current = current.next
         }
     }
-
     removerPrimeiro() {
         if (this.head) {
             this.head = this.head.next
         }
     }
-
     inserirInicio(element) {
         const newNode = new Node(element)
         newNode.next = this.head
         this.head = newNode
     }
-
     retornarPosicao(element) {
         let current = this.head
         let index = 0
